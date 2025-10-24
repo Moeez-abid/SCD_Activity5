@@ -1,5 +1,5 @@
 // calculator.test.js
-const { add, subtract, multiply, divide } = require('./calculator');
+const { add, subtract, multiply, divide, modulus } = require('./calculator');
 
 describe('Calculator functions', () => {
   describe('add()', () => {
@@ -51,6 +51,19 @@ describe('Calculator functions', () => {
 
     test('throws error when dividing by zero', () => {
       expect(() => divide(10, 0)).toThrow('Cannot divide by zero');
+    });
+  });
+  describe('modulus()', () => {
+    test('returns the remainder of division', () => {
+      expect(modulus(10, 3)).toBe(1);
+    });
+
+    test('returns 0 when divisible', () => {
+      expect(modulus(9, 3)).toBe(0);
+    });
+
+    test('throws error when modulus by zero', () => {
+      expect(() => modulus(10, 0)).toThrow('Cannot perform modulus by zero');
     });
   });
 });

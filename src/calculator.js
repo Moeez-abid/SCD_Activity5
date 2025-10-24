@@ -19,10 +19,17 @@ function divide(a, b) {
   return a / b;
 }
 
+function modulus(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot perform modulus by zero');
+  }
+  return a % b;
+}
 // Export the functions so they can be used in other files
 module.exports = {
   add,
   subtract,
   multiply,
   divide,
+  modulus
 };
