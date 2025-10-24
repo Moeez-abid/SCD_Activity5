@@ -19,7 +19,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo "Installing Node.js dependencies..."
-                sh "npm install"
+                bat "npm install"
             }
         }
 
@@ -35,7 +35,7 @@ pipeline {
             }
             steps {
                 echo 'Running unit tests with Jest...'
-                sh "npm test"
+                bat "npm test"
             }
         }
 
@@ -51,9 +51,11 @@ pipeline {
             echo 'Cleaning up workspace...'
             // deleteDir()
         }
+
         success {
             echo 'Pipeline executed successfully.'
         }
+
         failure {
             echo 'Pipeline failed.'
         }
