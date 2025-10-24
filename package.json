@@ -1,0 +1,23 @@
+{
+  "name": "scd_activity5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moeez-abid/SCD_Activity5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moeez-abid/SCD_Activity5/issues"
+  },
+  "homepage": "https://github.com/Moeez-abid/SCD_Activity5#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
